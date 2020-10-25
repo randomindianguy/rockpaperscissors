@@ -21,23 +21,23 @@ function convertToWord(letter){
 }
 
 function win (userChoice, compChoice){
-    const smallUserWord = "//User".fontsize(2).sub();
-    const smallCompWord = "//Comp".fontsize(2).sub();
+    const smallUserWord = " //User".fontsize(2).sub();
+    const smallCompWord = " //Comp".fontsize(2).sub();
     const userChoice_div = document.getElementById(userChoice).classList;
     userScore++;
     userScore_span.innerHTML = userScore;
-    result_p.innerHTML =  `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(compChoice)}${smallCompWord} . You Win!`; 
+    result_p.innerHTML =  `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(compChoice)}${smallCompWord}`; 
     userChoice_div.add('green-glow');
     setTimeout(()=> userChoice_div.remove('green-glow'), 300);
 }
 
 function lose (userChoice, compChoice){
-    const smallUserWord = "//User".fontsize(2).sub();
-    const smallCompWord = "//Comp".fontsize(2).sub();
+    const smallUserWord = " //User".fontsize(2).sub();
+    const smallCompWord = " //Comp".fontsize(2).sub();
     const userChoice_div = document.getElementById(userChoice).classList;
     compScore++;
     compScore_span.innerHTML = compScore;
-    result_p.innerHTML =  `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(compChoice)}${smallCompWord} . You Lost!`;
+    result_p.innerHTML =  `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(compChoice)}${smallCompWord}`;
     userChoice_div.add('red-glow');
     setTimeout(() => userChoice_div.remove('red-glow'), 300);
 }
@@ -46,7 +46,7 @@ function draw (userChoice, compChoice){
     const smallUserWord = "//User".fontsize(2).sub();
     const smallCompWord = "//Comp".fontsize(2).sub();
     const userChoice_div = document.getElementById(userChoice).classList;
-    result_p.innerHTML =  `${convertToWord(userChoice)}${smallUserWord} is equal to ${convertToWord(compChoice)}${smallCompWord} . Try Again!`;
+    result_p.innerHTML =  `${convertToWord(userChoice)}${smallUserWord} is equal to ${convertToWord(compChoice)}${smallCompWord}. Try Again!`;
     userChoice_div.classList.add('grey-glow');
     setTimeout(() => userChoice_div.remove('grey-glow'), 300);
 }
